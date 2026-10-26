@@ -38,3 +38,10 @@ Static checks are not end-to-end browser tests. The calendar is simplified (30-d
 - [ ] Non-specialist awakened Hunters can receive an organization offer and either unlock a specialist career, train, or decline.
 - [ ] Low energy blocks power demonstrations and does not create a specialist career for free.
 - [ ] Existing saves without workExperience or specialCareer continue to load.
+
+
+## Real-world geography
+- [ ] New lives receive a real named country and a city from that country's city list.
+- [ ] The HUD shows country and city; the initial life log includes the starting city and country.
+- [ ] Legacy saves without a city receive a valid city on load.
+- [ ] The generic sampled-country label is no longer used.
