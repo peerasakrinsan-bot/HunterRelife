@@ -183,3 +183,50 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 @media(min-width:950px){.app.earth-app{padding-left:18px;padding-right:18px}.topbar{padding:14px 0}.hero-hud{grid-template-columns:64px minmax(0,1fr) 120px 170px;padding:12px 16px}.hud-portrait{height:62px;width:62px}.earth-art{height:440px}}
 @media(max-width:700px){#game{display:flex;flex-direction:column;gap:0}#game>.hero-hud{order:0;width:100%}#game>.worldbar{order:1;width:100%}#game>.sim-controls{order:2;width:100%}#game>.scene{order:3;width:100%}#game>.critical-card{order:4;width:100%}#game>.profile-strip{order:5;width:100%}#game>.events-panel{order:6;width:100%}#game>.ending{order:7;width:100%}#game>.game-nav{order:8;width:100%}#game>.source-note{order:9;width:100%}.hero-hud{grid-template-columns:45px minmax(0,1fr) 70px;gap:7px;padding:8px}.hud-portrait{width:45px;height:49px;font-size:28px}.hud-wallet{padding-left:7px}.hud-wallet strong{font-size:16px}.hud-stats{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.hud-stats span{padding:4px 5px}.hud-meter{grid-template-columns:18px minmax(20px,1fr) 48px}.earth-art{height:300px}.game-nav{margin-top:2px}.worldbar>div{padding:8px 6px}.worldbar strong{font-size:9px}}
 @media(max-width:380px){.hud-wallet{display:none}.hero-hud{grid-template-columns:42px minmax(0,1fr)}.hud-stats{grid-column:1/-1}.earth-art{height:260px}.speed-row{grid-template-columns:1.25fr repeat(4,.55fr) .9fr}.run-btn,.speed,.step-btn{font-size:8px}}
+
+
+/* Daily-life scenes and compact mobile-first diary layout */
+.scene-top #simDate{color:#e9c88d;letter-spacing:.7px}
+#game>.hero-hud{padding:7px 9px;gap:7px;margin-bottom:6px}
+#game>.worldbar{margin-bottom:6px}
+#game>.sim-controls{padding:8px;margin-bottom:6px}
+#game>.scene{margin-bottom:6px}
+.earth-art{height:clamp(235px,33vh,330px);border-radius:5px;transition:background .25s ease}
+.scene-home{background:linear-gradient(#a5c9e3 0%,#e5d7bd 52%,#a4a58a 53%,#526456 100%)}
+.scene-home .skyline{opacity:.18;filter:sepia(.7)}
+.scene-home .scene-backdrop{background:linear-gradient(90deg,transparent 0 9%,#8b674c 9% 27%,#684a3b 27% 29%,transparent 29% 100%);clip-path:polygon(0 40%,30% 40%,30% 100%,0 100%);opacity:.7}
+.scene-clinic{background:linear-gradient(#a9c9d9 0%,#dce7e4 52%,#9baea9 53%,#53676a 100%)}
+.scene-clinic .scene-backdrop{position:absolute;inset:25% 10% 24%;background:repeating-linear-gradient(90deg,#d8e5e5 0 38px,#92adb6 38px 42px);border:4px solid #eef5f1;box-shadow:0 0 0 4px #718d9b}
+.scene-clinic .scene-backdrop:after{content:'✚  CLINIC';position:absolute;top:8px;left:8px;background:#f0f6f4;color:#357c8d;padding:5px 9px;font-size:10px;font-weight:900}
+.scene-park{background:linear-gradient(#8ebbd7 0%,#c8d9c4 52%,#718b69 53%,#344c42 100%)}
+.scene-park .scene-backdrop{position:absolute;inset:30% 0 25%;background:radial-gradient(ellipse at 15% 45%,#4d805e 0 10%,transparent 10.5%),radial-gradient(ellipse at 82% 40%,#578a65 0 12%,transparent 12.5%),linear-gradient(transparent 60%,#9b9670 60%);opacity:.9}
+.scene-school{background:linear-gradient(#8db8d3 0%,#d4ddd3 52%,#87988b 53%,#364b47 100%)}
+.scene-school .scene-backdrop{position:absolute;inset:28% 16% 23%;background:repeating-linear-gradient(90deg,#b9c7c3 0 40px,#6d8992 40px 45px);border:5px solid #e1e6dd;box-shadow:0 0 0 4px #728b91}
+.scene-school .scene-backdrop:after{content:'SCHOOL';position:absolute;top:5px;left:50%;transform:translateX(-50%);background:#e1e6dd;color:#425b66;padding:4px 8px;font-size:9px;font-weight:900;letter-spacing:2px}
+.scene-work,.scene-city{background:linear-gradient(#192b4b 0%,#435775 54%,#566078 55%,#26363f 100%)}
+.scene-work .skyline,.scene-city .skyline{opacity:.85}
+.scene-gate{background:linear-gradient(#07162a 0%,#192c4d 48%,#22273d 49%,#121c2b 100%)}
+.scene-gate .scene-backdrop{position:absolute;inset:12% 35% 18%;border:7px solid #69d8ff;border-bottom:0;border-radius:90px 90px 0 0;background:radial-gradient(ellipse at center,#c0f8ff 0%,#347fe4 22%,#152a66 55%,#071326 78%);box-shadow:0 0 18px #2ebcff,0 0 50px #2779ff77}
+.scene-gate .skyline{filter:hue-rotate(170deg);opacity:.35}
+.scene-shop{background:linear-gradient(#6d8fa9 0%,#c2c8c1 54%,#6d7d78 55%,#293b3b 100%)}
+.scene-shop .scene-backdrop{position:absolute;inset:35% 8% 23%;background:repeating-linear-gradient(90deg,#a87857 0 46px,#e0bc7c 46px 51px);border:4px solid #513e38}
+.scene-shop .scene-backdrop:after{content:'MARKET';position:absolute;top:-17px;left:20%;background:#b84f4f;color:#fff0cf;padding:3px 12px;font-size:9px;font-weight:900}
+.scene-guild{background:linear-gradient(#1a2d4d 0%,#4b6380 52%,#6e7c8a 53%,#1d2937 100%)}
+.scene-guild .scene-backdrop{position:absolute;inset:19% 19% 22%;background:linear-gradient(135deg,#4c5367,#202d42);border:5px solid #b6a17d;box-shadow:inset 0 0 0 3px #6f604c}
+.scene-guild .scene-backdrop:after{content:'HUNTER GUILD';position:absolute;left:0;right:0;top:35%;text-align:center;color:#f3d48f;font-weight:900;letter-spacing:2px;font-size:clamp(10px,2vw,16px)}
+.pixel-person.person-infant{transform:scale(.42);transform-origin:bottom center;bottom:15px}
+.pixel-person.person-infant .person-head{border-radius:45%}
+.pixel-person.person-child{transform:scale(.72);transform-origin:bottom center}
+.scene-caption{padding:6px 8px}
+.scene-caption b{font-size:11px}
+.scene-caption small{font-size:8px}
+.events-panel{padding:9px}
+.events-panel .section-heading{margin-bottom:6px}
+.events-panel .tab-switch{margin-bottom:5px}
+.feed-entry{padding:7px 6px}
+.feed-entry time{font-size:7px}
+.feed-entry strong{font-size:10px}
+.feed-entry p{font-size:9px;line-height:1.4}
+#game>.game-nav{padding:4px;gap:3px}
+.game-nav button{padding:5px 1px;font-size:8px}
+@media(max-width:700px){#game>.events-panel{order:4;width:100%}#game>.critical-card{order:5;width:100%}#game>.profile-strip{order:6;width:100%}.earth-art{height:clamp(230px,31vh,300px)}.hero-hud{margin-bottom:5px}.scene-bottom{padding:7px 3px 3px}.scene-bottom span{font-size:7px}}
