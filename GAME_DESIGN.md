@@ -64,3 +64,10 @@ This is an original hybrid concept, not an exact copy. A credible real-world sim
 - Awakened Hunters who develop a power-specialist career may receive power-specific contract opportunities. Players can accept higher-paying, higher-energy-risk assignments, negotiate safer lower-paying work, or decline.
 - Hunters without a specialist career may receive occasional organization offers. Demonstrations cost energy and may unlock a specialist role; training first or declining are valid choices.
 - These systems are fictional game mechanics and do not represent real-world salaries or employment advice.
+
+
+## Real-world geography
+- Character origins use named real-world countries and a country-specific list of real cities; the sampled location is stored on the life record and shown in the country/location HUD.
+- The former generic 'Other countries (sampled)' option is replaced by named countries with their own city lists.
+- Country and city names are real-world references. Gates, monsters, awakening, Hunter ranks, and specialist powers remain fictional elements layered onto that setting.
+- City lists are curated starter samples, not a complete gazetteer; they are not intended to represent all cities in each country.
