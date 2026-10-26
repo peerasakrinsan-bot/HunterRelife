@@ -11,7 +11,7 @@ The unique layer is an original Hunter/Gate system inspired by the broad genre c
 1. Start a new life. Draw country using annual live-birth weights (or optionally population weights); draw sex, urban/rural setting, household resources, and family circumstances using documented probability tables where available.
 2. Advance one simulated year per tick. Resolve childhood, education, health, relationships, work, income, and age-appropriate events.
 3. At an age-dependent check, determine whether the character awakens. Awakening is rare and independent of wealth/status unless a specific mechanic explicitly changes the odds.
-4. Before awakening, there is no Hunter level or Hunter EXP; ordinary life progression is represented by education, work, health and relationships. On awakening, Hunter Level 1 and the Hunter EXP track unlock. If awakened, the character may train, register, test for rank, join a guild, take Gate missions, develop class/skills, sustain injuries, gain income/reputation, or die from justified mission outcomes. If not awakened, ordinary lives and careers remain fully playable.
+4. Before awakening, there is no Hunter level or Hunter EXP; ordinary life progression is represented by education, work, health and relationships. On awakening, Hunter Level 1 and the Hunter EXP track unlock, and the system randomly assigns official rank, class, and one special power. If awakened, the character may train, register, test for rank, join a guild, take Gate missions, develop class/skills, sustain injuries, gain income/reputation, or die from justified mission outcomes. If not awakened, ordinary lives and careers remain fully playable.
 5. Critical events pause in Manual/Assisted modes; Full Auto uses personality, goals, safety, and resources.
 6. End the life at a modelled lifespan/death event or retirement. Produce a chronicle and preserve completed lives when starting again.
 
@@ -27,7 +27,7 @@ Every imported dataset should include source URL, indicator name, reference year
 
 - Modern world, real country/city context, real family and career circumstances.
 - Fictional global Gate incidents and Hunter agencies are an alternate-reality layer, clearly distinguished from real events.
-- Ranks E, D, C, B, A, S, plus Special/Unclassified; official rank remains separate from actual combat power and level.
+- Awakening randomly assigns Hunter rank (weighted E/D/C/B/A/S odds), Hunter class, and one special power. Keep the official rank independent from level; rank must not auto-upgrade from EXP.
 - Classes: Warrior, Assassin, Mage, Archer, Tank, Healer, Summoner, Hybrid, plus original advanced classes.
 - Gate missions take multiple simulated days and preserve enemy HP/progress; calculate combat before applying rewards, injuries and mission outcomes.
 - Non-awakened paths: education, skilled trades, service, research, entrepreneurship, public service and family life.
