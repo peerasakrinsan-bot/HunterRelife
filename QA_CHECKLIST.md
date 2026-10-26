@@ -9,6 +9,11 @@
 - [x] Save/load uses localStorage; loaded state normalization handles missing arrays and invalid date/combat data.
 - [x] Reset clears current save and local Legacy archive.
 
+## New power-life checks
+- [ ] After awakening, verify monthly choice to apply power at work/study, train for EXP, or rest with family.
+- [ ] Confirm training EXP can level the Hunter without changing official rank.
+- [ ] Confirm the chosen power can produce an everyday-life benefit and Daily Log entry.
+
 ## Manual browser checks still required
 - [ ] Start a new life; confirm country, age, date and initial scene.
 - [ ] Advance one day; confirm Daily Log date increments.
