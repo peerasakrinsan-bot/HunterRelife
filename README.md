@@ -27,3 +27,6 @@ Hunter awakening, Gates, monsters, guilds and mission results are fictional game
 5. Validate game ticks, saves, auto decisions and probability distributions in browser tests.
 
 This is an original hybrid concept inspired by the broad life-simulation genre; it does not copy another game's source code, text, art or branding.
+
+
+Career progression now includes experience-based promotion chances, salary increases, specialist Hunter job offers, and optional contracts that trade energy/risk for rewards. These are fictional simulation values.
