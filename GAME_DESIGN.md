@@ -57,3 +57,10 @@ Every imported dataset should include source URL, indicator name, reference year
 ## Scope and honesty
 
 This is an original hybrid concept, not an exact copy. A credible real-world simulator requires sourced country datasets and clear notes about which events are real-statistics-based versus fictional game rules. A playable prototype may begin with a smaller, explicitly documented dataset before expanding coverage.
+
+
+## Career progression and specialist work
+- Adult careers now track work experience and can earn periodic promotions with salary increases. Promotion odds are bounded and affected modestly by job level and education.
+- Awakened Hunters who develop a power-specialist career may receive power-specific contract opportunities. Players can accept higher-paying, higher-energy-risk assignments, negotiate safer lower-paying work, or decline.
+- Hunters without a specialist career may receive occasional organization offers. Demonstrations cost energy and may unlock a specialist role; training first or declining are valid choices.
+- These systems are fictional game mechanics and do not represent real-world salaries or employment advice.
