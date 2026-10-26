@@ -240,3 +240,17 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 .life-system-grid b{font-size:14px;color:#edf3fa;overflow-wrap:anywhere}
 .life-system-grid span{font-size:9px;color:#91a1b6}
 .life-system-grid strong{color:var(--gold)}
+
+/* Phase 3: Hunter gate and turn-based combat */
+.combat-panel{padding:12px;margin-bottom:8px;border-color:#4c83a9;background:linear-gradient(145deg,#101f31,#0a121e)}
+.combat-panel .primary-btn{width:100%;margin-top:8px}
+.enemy-card{display:grid;grid-template-columns:1fr auto;gap:6px;padding:10px;border:1px solid #34475e;border-radius:6px;background:#0a111b}
+.enemy-card small{display:block;font-size:8px;color:#ff8a9c;letter-spacing:1px}
+.enemy-card strong{font-size:13px}
+.enemy-card .bar{grid-column:1/-1;margin:0}
+#enemyHpBar{display:block;width:100%;height:100%;background:linear-gradient(90deg,#d8485c,#ff7b89)}
+.combat-meta{display:flex;justify-content:space-between;font-size:10px;color:var(--cyan);margin:8px 0}
+.combat-log{font-size:10px;line-height:1.5;color:#c0cbd9;min-height:30px}
+.combat-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.combat-actions button{border:1px solid #3a526d;border-radius:5px;padding:9px 3px;background:#132337;color:#e8f4ff;font-size:10px}
+.combat-actions button:first-child{border-color:#b78e65}
