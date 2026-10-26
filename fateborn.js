@@ -95,5 +95,5 @@ $('newLifeBtn').addEventListener('click',newLife);$('newLifeFromLegacy').addEven
 if(!state.feed.length){log('REBIRTH','คุณเกิดใหม่ในโลกที่เกตเชื่อมต่อกับดันเจี้ยน · '+state.character.race+' · '+state.character.birthplace);log('FAMILY','คุณเกิดในครอบครัว: '+state.character.family);log('STRANGE OMEN','มีบางอย่างพิเศษซ่อนอยู่ในตัวคุณ แต่ยังไม่สามารถระบุได้')}
 if(!state.world.gates.length){const g=generateGate();g.status='active'}
 window.addEventListener('resize',renderScene);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){save();if(state.mode!=='auto')stopTimer()}});
-render();save();
+render();save();if(!state.paused&&!state.pendingDecision&&state.character.alive)startTimer();
 })();
