@@ -30,3 +30,11 @@
 
 ## Known limitations
 Static checks are not end-to-end browser tests. The calendar is simplified (30-day months). Economy, ranks, skills, inventory and enemy balance are prototype mechanics. Legacy is stored locally and is not cloud-synced.
+
+
+## Career progression and Hunter specialist work
+- [ ] Monthly promotion checks can increase job level and income without exceeding reasonable growth.
+- [ ] Specialist careers can receive unique paid assignments, with energy costs and occasional risk.
+- [ ] Non-specialist awakened Hunters can receive an organization offer and either unlock a specialist career, train, or decline.
+- [ ] Low energy blocks power demonstrations and does not create a specialist career for free.
+- [ ] Existing saves without workExperience or specialCareer continue to load.
