@@ -15,7 +15,7 @@ A mobile-first browser RPG about living an entire life in an original fantasy wo
 - Browser localStorage save/load and PWA manifest/service-worker offline shell with an original app icon.
 
 ## Run and deploy
-Open `index.html` or serve the folder using a static web server. For Vercel, import the repository, use no build command, and set output directory to `.`.
+Open `index.html` or serve the folder using a static web server. For GitHub Pages, open **Settings → Pages**, select **GitHub Actions** as the build/deployment source, then push to `main` or run the `Deploy Hunter ReLife to GitHub Pages` workflow. Once the workflow succeeds, the site will be available at `https://peerasakrinsan-bot.github.io/HunterRelife/`. The workflow has been added, but Pages still needs to be enabled in repository settings before a live URL can be confirmed. For Vercel, import the repository, use no build command, and set output directory to `.`.
 
 ## Save and simulation notes
 The save is local to the current browser/device. There is no account system, cloud sync, server-authoritative simulation, or background execution guarantee. The simulation advances while the page is active; browser suspension can pause timers. Fast mode runs 10 sequential daily ticks per second while no decision is pending.
