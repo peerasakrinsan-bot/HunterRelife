@@ -31,5 +31,5 @@ The save is local to the current browser/device. There is no account system, clo
 - Checked that all JavaScript DOM ID references exist in `index.html`.
 - Ran 30 sequential daily ticks in a mock DOM harness: calendar advanced from month 1 day 1 to month 2 day 1, and character age advanced to 1 month.
 - Checked pause/resume controls do not change the date unless ticks run.
-- Simulated a boss gate mission in a mock DOM harness and verified the gate was marked cleared, the mission ended, and gate-clear rewards were not duplicated on the next day.
+- Simulated a boss gate mission in a mock DOM harness and verified enemy HP persists across daily ticks (200 → 170 → 140 in the test scenario), the gate was marked cleared, the mission ended, and gate-clear rewards were not duplicated on the next day.
 - A full real-browser interaction pass on Android Chrome is still recommended before production release.
