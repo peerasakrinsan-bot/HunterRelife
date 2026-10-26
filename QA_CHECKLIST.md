@@ -14,6 +14,9 @@
 - [ ] Confirm training EXP can level the Hunter without changing official rank.
 - [ ] Confirm the chosen power can produce an everyday-life benefit and Daily Log entry.
 
+- [ ] Confirm energy decreases when using/training powers and recovers over time or when resting.
+- [ ] Confirm adult characters can unlock a power-based specialist career after using powers in daily life.
+
 ## Manual browser checks still required
 - [ ] Start a new life; confirm country, age, date and initial scene.
 - [ ] Advance one day; confirm Daily Log date increments.
