@@ -254,3 +254,19 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 .combat-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .combat-actions button{border:1px solid #3a526d;border-radius:5px;padding:9px 3px;background:#132337;color:#e8f4ff;font-size:10px}
 .combat-actions button:first-child{border-color:#b78e65}
+
+/* Phase 4: real detail panels and state-responsive scene cues */
+.detail-panel{padding:12px;margin:0 0 8px;scroll-margin-top:12px}
+.item-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.item-card{display:flex;flex-direction:column;gap:5px;text-align:left;padding:10px;background:linear-gradient(145deg,#172438,#0b121d);border:1px solid #3a4d65;border-radius:6px;color:#e9f2ff;min-width:0}
+.item-card strong{font-size:11px;overflow-wrap:anywhere}
+.item-card small{font-size:9px;color:#9db0c6}
+.legacy-list{display:grid;gap:7px}
+.legacy-card{padding:10px;border:1px solid #2d3d52;background:#0b1420;border-radius:6px}
+.legacy-card strong{font-size:11px;color:#e6c58d}
+.legacy-card p{font-size:9px;color:#a8b8ca;margin:5px 0 0}
+.nav-focus{outline:2px solid #5ddcf2;outline-offset:2px;transition:outline .2s}
+.scene-gate .pixel-person.person-hunter{filter:drop-shadow(0 0 8px #4bd7ff);animation: hunter-ready .7s ease-in-out infinite alternate}
+.scene-guild .pixel-person{filter:drop-shadow(0 0 5px #d9bd84)}
+@keyframes hunter-ready{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+@media(max-width:700px){.item-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-panel{padding:9px}.game-nav{grid-template-columns:repeat(6,minmax(0,1fr))}.game-nav button span{font-size:16px}.game-nav button{font-size:7px}}
