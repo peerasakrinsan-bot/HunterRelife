@@ -12,6 +12,7 @@ A mobile-first browser RPG about living an entire life in an original fantasy wo
 - Multi-day Gate missions with persistent enemy HP, automatic combat calculations, retreat conditions, bosses, loot, and one-time rewards.
 - World news, regional threat, market changes, guild notices, relationship tracking, and a life chronicle.
 - CSS pixel-art side-scrolling scene with a camera that follows the character and keeps them centered while the world moves.
+- Mobile reference-flow UI pass: compact calendar/simulation HUD, character status ahead of the scene, taller scrolling scene, readable Life Events/World News timeline, and a fixed compact bottom navigation.
 - Browser localStorage save/load and PWA manifest/service-worker offline shell with an original app icon.
 
 ## Run and deploy
