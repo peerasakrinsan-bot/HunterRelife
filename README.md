@@ -1,19 +1,23 @@
-# Hunter Relife
+# FATEBORN: AWAKENED
 
-A mobile-first dark fantasy browser RPG about reincarnation as a hunter in a world of Gates and dungeons.
+A mobile-first pixel-art fantasy life simulator about reincarnating into a world of Hunters, Gates, dungeons, and awakened powers.
 
-## Features
-- Hunter profile, level, XP, stats and rank
-- Gate expeditions with combat and loot
-- Local autosave and offline time progression
-- Installable PWA shell
-- Static hosting ready (GitHub Pages / Vercel)
+## MVP gameplay
+- Daily life loop: choose rest, train, work, hunt, study, or socialize; then advance exactly one in-game day.
+- Life stages from infant to elder, age progression, milestones, and rebirth.
+- Automatic hunt resolution, EXP, levels, stats, skills, gold, mana essence, and Gate encounters.
+- Story choices, class paths, event log, and life chronicle.
+- Browser localStorage autosave and installable PWA shell with offline cache.
+- CSS pixel-art scene and responsive mobile-first interface.
 
-## Run locally
-Open `index.html` in a browser, or serve this folder with any static web server.
+## Run
+Open `index.html` in a browser or serve this directory using a static web server. Service worker caching is enabled on HTTP(S).
 
-## Persistence
-The MVP saves progress in browser `localStorage` on this device. Cloud saves and accounts are not included yet; add a backend before promising cross-device synchronization.
+## Save and time
+Saves are stored in localStorage on the current browser/device and do not sync across devices. When returning after full real-world days have elapsed, the calendar and age advance by that number of days. During play, the player can advance one in-game day at a time.
 
-## Deploy
-Import this repository into Vercel as a static site. No build command is required; output directory is `.`.
+## Deploy to Vercel
+Import this repository, use no build command, and set the output directory to `.`.
+
+## Next milestones
+Cloud saves/accounts, deeper combat and enemy variety, more Gate ranks, richer event chains, and balancing/testing.
