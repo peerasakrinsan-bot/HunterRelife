@@ -7,7 +7,7 @@ A mobile-first browser life simulator set in the modern real world, with an orig
 - Follow a character day by day from birth through childhood, education, work, relationships, old age and the end of life (prototype calendar: 30 days/month, 12 months/year).
 - Pause/resume, advance one day, and run at 1×, 2×, 4× or 8× speed.
 - Make choices at life milestones and during random events; enable Auto mode to resolve choices automatically.
-- Rare fictional Hunter awakening randomly assigns rank, class and a special power. Powers can affect daily work/study, Hunter training and rest choices as well as Gate combat. Skills, inventory and Legacy panels are prototype-level.
+- Rare fictional Hunter awakening randomly assigns rank, class and a special power. Powers can affect daily work/study, Hunter training and rest choices as well as Gate combat. Power use consumes energy, rest restores it, and adult characters may unlock power-based specialist careers. Skills, inventory and Legacy panels are prototype-level.
 - Mobile-first interface with a modern pixel-art city scene, character status, life events, world news and a local save.
 - Save/load through browser localStorage. The unfinished life stays on the current device/browser.
 
