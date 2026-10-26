@@ -149,3 +149,37 @@
 .person-hunter .person-body{background:#172b49;box-shadow:0 0 8px #4acbff}
 .person-hunter:after{content:'✦';position:absolute;top:10px;left:-12px;color:#65d9ff;font-size:15px;text-shadow:0 0 8px #00bfff}
 @media(max-width:440px){.prop-gate{width:86px;height:106px;font-size:43px}.prop-office{height:78px;width:43px}.scene-bubble{font-size:8px}}
+
+
+/* === Hunter Re:Life · immersive RPG dashboard === */
+:root{--bg:#070b13;--panel:#101824;--line:#344357;--cyan:#65dfff;--gold:#eac58a;--violet:#9b8bff}
+body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),radial-gradient(ellipse at 95% 18%,#172b42 0,transparent 32%),#070b13}
+.app.earth-app{max-width:1280px;padding:0 12px calc(90px + env(safe-area-inset-bottom))}
+.topbar{padding:10px 0}.logo{border-radius:7px;border-color:#a88b69;background:linear-gradient(145deg,#18243a,#0b111d);box-shadow:inset 0 0 0 2px #202b3d}
+.panel{border-radius:8px;border-color:#344153;background:linear-gradient(145deg,#131d2b,#0a111b);box-shadow:0 5px 18px #0005}
+#game{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(290px,.9fr);gap:0 12px;align-items:start}
+#game>.worldbar,#game>.sim-controls,#game>.hero-hud,#game>.game-nav,#game>.source-note,#game>.ending{grid-column:1/-1}
+#game>.scene{grid-column:1;grid-row:auto;min-width:0}
+#game>.events-panel{grid-column:1;grid-row:auto;min-width:0}
+#game>.profile-strip{grid-column:2;grid-row:3;align-self:start}
+#game>.critical-card{grid-column:2;grid-row:4;align-self:start}
+#game>.ending{grid-row:auto}
+.worldbar{gap:8px;margin-bottom:8px}.worldbar>div{border-radius:6px;background:#0c1420;border-color:#354357;padding:9px 12px}.worldbar strong{font-size:11px}
+.sim-controls{margin-bottom:8px;border-color:#39485a}.run-btn{background:linear-gradient(90deg,#164e56,#153b43);border-color:#3d9bac}
+.hero-hud{display:grid;grid-template-columns:54px minmax(0,1fr) 100px 150px;align-items:center;gap:10px;margin-bottom:8px;padding:10px 12px;border:1px solid #6e604e;background:linear-gradient(110deg,#17202d,#0b111b 65%,#141d29)}
+.hud-portrait{height:54px;width:54px;display:grid;place-items:center;font-size:34px;background:linear-gradient(135deg,#27344a,#111827);border:2px solid #9b835e;border-radius:5px;box-shadow:inset 0 0 0 2px #101722}
+.hud-identity{min-width:0;display:grid;gap:3px}.hud-identity>strong{font-size:14px}.hud-identity>span{font-size:8px;letter-spacing:1px;color:var(--gold)}
+.hud-meter{display:grid;grid-template-columns:20px minmax(45px,1fr) 55px;gap:5px;align-items:center;font-size:8px}.hud-meter small{color:#aebbd0}.hud-meter i{height:7px;background:#273347;border-radius:2px;overflow:hidden}.hud-meter i b{display:block;width:80%;height:100%;background:linear-gradient(90deg,#d94d67,#ff7c86)}.hud-meter.exp i b{background:linear-gradient(90deg,#356be0,#69d6ff)}.hud-meter em{font-style:normal;text-align:right;color:#d8e1ef;font-size:8px}
+.hud-wallet{display:grid;gap:3px;border-left:1px solid #334155;padding-left:10px}.hud-wallet small{font-size:8px;color:var(--muted)}.hud-wallet strong{font-size:19px;color:var(--gold)}.hud-wallet span{font-size:8px;color:var(--muted)}
+.hud-stats{display:grid;grid-template-columns:1fr 1fr;gap:5px}.hud-stats span{background:#0a111b;border:1px solid #2b394d;border-radius:4px;padding:5px 7px;font-size:8px;color:#aebbd0;display:flex;justify-content:space-between}.hud-stats b{font-size:11px;color:#f3f5fb}
+.scene{padding:7px}.scene-top{font-size:9px;padding:5px 6px}.earth-art{height:clamp(260px,38vw,440px);border:1px solid #43556a;border-radius:4px;box-shadow:inset 0 0 0 3px #111927;image-rendering:pixelated}
+.scene-caption{left:10px;right:10px;bottom:9px;background:#09111bd9;border:1px solid #566579;border-radius:4px;padding:8px 10px}.scene-caption b{font-size:12px}.scene-caption small{font-size:9px}.scene-bubble{border-radius:4px;border:1px solid #536780;background:#0a1220e8}
+.scene-bottom{font-size:8px}.profile-strip{padding:13px}.profile-title h1{font-size:18px}.rank{font-size:8px}
+.critical-card{border-color:#806b4d;background:linear-gradient(145deg,#1b202b,#101721);border-radius:8px}.critical-label{color:#ff808d}.critical-card h2{font-size:16px;margin:8px 0}.critical-choices button{border-radius:5px;padding:11px;background:linear-gradient(90deg,#192637,#101824);border-color:#44566a;font-size:11px}.critical-choices button:first-child{border-color:#3eafe5;box-shadow:inset 0 0 0 1px #17374b}
+.events-panel{padding:12px}.section-heading h2{font-size:16px}.feed{gap:0}.feed-entry{display:grid;grid-template-columns:54px minmax(0,1fr);column-gap:9px;padding:10px 7px;border-left:0;border-bottom:1px solid #263447;border-radius:0;background:transparent}.feed-entry time{grid-row:span 2;align-self:start;padding-top:2px}.feed-entry strong{font-size:11px}.feed-entry p{font-size:10px;margin-top:4px}
+.game-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:6px;position:sticky;bottom:calc(5px + env(safe-area-inset-bottom));z-index:20;background:#0b121eee;backdrop-filter:blur(14px);box-shadow:0 8px 25px #0009}
+.game-nav button{display:grid;justify-items:center;gap:3px;background:#111b2a;color:#aab8cc;border:1px solid #2c3a4f;border-radius:5px;padding:7px 2px;font-size:9px}.game-nav button span{font-size:19px;color:#7daaff}.game-nav button.active{background:linear-gradient(180deg,#17424d,#102832);border-color:#52cde0;color:#eafcff}.game-nav button.active span{color:#70e9f4}
+.source-note{font-size:10px}.source-note p{font-size:9px}
+@media(min-width:950px){.app.earth-app{padding-left:18px;padding-right:18px}.topbar{padding:14px 0}.hero-hud{grid-template-columns:64px minmax(0,1fr) 120px 170px;padding:12px 16px}.hud-portrait{height:62px;width:62px}.earth-art{height:440px}}
+@media(max-width:700px){#game{display:flex;flex-direction:column;gap:0}#game>.hero-hud{order:0;width:100%}#game>.worldbar{order:1;width:100%}#game>.sim-controls{order:2;width:100%}#game>.scene{order:3;width:100%}#game>.critical-card{order:4;width:100%}#game>.profile-strip{order:5;width:100%}#game>.events-panel{order:6;width:100%}#game>.ending{order:7;width:100%}#game>.game-nav{order:8;width:100%}#game>.source-note{order:9;width:100%}.hero-hud{grid-template-columns:45px minmax(0,1fr) 70px;gap:7px;padding:8px}.hud-portrait{width:45px;height:49px;font-size:28px}.hud-wallet{padding-left:7px}.hud-wallet strong{font-size:16px}.hud-stats{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.hud-stats span{padding:4px 5px}.hud-meter{grid-template-columns:18px minmax(20px,1fr) 48px}.earth-art{height:300px}.game-nav{margin-top:2px}.worldbar>div{padding:8px 6px}.worldbar strong{font-size:9px}}
+@media(max-width:380px){.hud-wallet{display:none}.hero-hud{grid-template-columns:42px minmax(0,1fr)}.hud-stats{grid-column:1/-1}.earth-art{height:260px}.speed-row{grid-template-columns:1.25fr repeat(4,.55fr) .9fr}.run-btn,.speed,.step-btn{font-size:8px}}
