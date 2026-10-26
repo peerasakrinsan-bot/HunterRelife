@@ -30,3 +30,6 @@ This is an original hybrid concept inspired by the broad life-simulation genre; 
 
 
 Career progression now includes experience-based promotion chances, salary increases, specialist Hunter job offers, and optional contracts that trade energy/risk for rewards. These are fictional simulation values.
+
+
+**Real-world setting:** each new life is assigned a named real country and a city drawn from that country's real-city list. Geography is real-world; the Hunter/Gate/monster layer is fictional. City lists are starter samples, not exhaustive geographic data.
