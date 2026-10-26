@@ -270,3 +270,5 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 .scene-guild .pixel-person{filter:drop-shadow(0 0 5px #d9bd84)}
 @keyframes hunter-ready{from{transform:translateY(0)}to{transform:translateY(-3px)}}
 @media(max-width:700px){.item-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-panel{padding:9px}.game-nav{grid-template-columns:repeat(6,minmax(0,1fr))}.game-nav button span{font-size:16px}.game-nav button{font-size:7px}}
+
+.save-status{display:block;text-align:right;font-size:8px;letter-spacing:1px;color:#82d7b2;padding:3px 8px;opacity:.9}
