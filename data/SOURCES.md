@@ -27,3 +27,12 @@ Country life expectancy, income/GDP and schooling fields are broad rounded conte
 - This is a gameplay heuristic, **not** a measured country-specific household-income or fertility distribution. The GDP values and country weights are approximate starter values and must not be described as official current statistics.
 - World Bank Indicators API documentation: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api . The API offers indicators that can support a later data-import step; country-specific birth weights require an appropriate births/population dataset and reference year.
 - Next data upgrade: import versioned UN World Population Prospects births by country/area and year; then use births as country-selection weights. Import fertility indicators only as a clearly labelled proxy for sibling counts, not as a direct household-size measure.
+
+
+## Birth-origin traits and childhood events (2026-10-27)
+
+The birth flow now assigns a simulated home language, urban/suburban/rural setting, environment description, school-access score, and opportunity score. These are lightweight gameplay traits, not verified country-level measurements. The language map is a simplified starter list and may not reflect multilingual reality in every city or household.
+
+Traits influence the simulation: family wealth changes starting money; school access modifies education progression; opportunity modestly changes work-income chances; childhood events can affect health, happiness, family bonds, social ties, education, and school progress. Existing saves receive fallback values for newly introduced fields.
+
+For future data-backed versions, use official country datasets and retain the source year. UN World Population Prospects 2024 provides population estimates and projections for 237 countries or areas; its data portal also provides downloadable datasets and an API. See https://population.un.org/wpp and https://www.un.org/development/desa/pd/content/World-Population-Prospects-2024. Do not treat the current generated scores as official statistics.
