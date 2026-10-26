@@ -40,13 +40,13 @@ Every imported dataset should include source URL, indicator name, reference year
 - Main scene: original pixel-art modern location (home, street, school, workplace, hospital, Hunter guild, Gate interior); character remains visually centered while scene changes according to activity.
 - Below: event timeline and world news, with critical decision cards and 2–4 meaningful choices.
 - Bottom navigation: Life, Character, Relationships, Map, Inventory, Skills, Hunter/Guild, World, Legacy.
-- Year tick is the default life-simulation unit, unlike the prior fantasy prototype's 360-day calendar. If daily calendar details are needed for missions, keep those as a separate internal mission clock.
-- Save current life locally and preserve completed chronicles. No cloud save or background progression claims unless implemented.
+- Daily tick is the chosen prototype pacing: 30-day months and 12 months per year. Character age advances after 360 ticks. This is a simplified fictional calendar, not a real-world calendar.
+- Save current life locally and preserve completed chronicles in a local Legacy archive. No cloud save or background progression claims unless implemented.
 
 ## Implementation sequence
 
 1. Replace fantasy-only birth generator with a data-driven real-world birth draw and a clearly attributed starter dataset.
-2. Replace the 360-day fantasy calendar with world year + character age progression, while preserving deterministic sequential ticks and pause/speed behavior.
+2. Use one simulated day per tick with a documented 30-day month / 12-month calendar for the prototype; age advances every 360 simulated days. Preserve sequential ticks and pause/speed behavior.
 3. Add real-world life-stage, education, career, income, health and relationship event systems.
 4. Add rare awakening as an optional fictional layer; build Hunter ranks, classes, training, guilds, Gates and combat on top.
 5. Rework UI labels, character details, locations and pixel scene for modern Earth and Hunter-specific situations.
