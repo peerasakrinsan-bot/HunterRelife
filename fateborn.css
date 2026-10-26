@@ -230,3 +230,13 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 #game>.game-nav{padding:4px;gap:3px}
 .game-nav button{padding:5px 1px;font-size:8px}
 @media(max-width:700px){#game>.events-panel{order:4;width:100%}#game>.critical-card{order:5;width:100%}#game>.profile-strip{order:6;width:100%}.earth-art{height:clamp(230px,31vh,300px)}.hero-hud{margin-bottom:5px}.scene-bottom{padding:7px 3px 3px}.scene-bottom span{font-size:7px}}
+
+/* Phase 2: ongoing education, work, finance and relationships */
+.life-system{padding:12px;margin:0 0 8px}
+.life-system .section-heading{margin-bottom:8px}
+.life-system-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.life-system-grid>div{display:grid;gap:4px;padding:9px;background:#0b1420;border:1px solid #2a3a4d;border-radius:6px;min-width:0}
+.life-system-grid small{font-size:8px;letter-spacing:.6px;color:var(--cyan);text-transform:uppercase}
+.life-system-grid b{font-size:14px;color:#edf3fa;overflow-wrap:anywhere}
+.life-system-grid span{font-size:9px;color:#91a1b6}
+.life-system-grid strong{color:var(--gold)}
