@@ -36,3 +36,10 @@ The birth flow now assigns a simulated home language, urban/suburban/rural setti
 Traits influence the simulation: family wealth changes starting money; school access modifies education progression; opportunity modestly changes work-income chances; childhood events can affect health, happiness, family bonds, social ties, education, and school progress. Existing saves receive fallback values for newly introduced fields.
 
 For future data-backed versions, use official country datasets and retain the source year. UN World Population Prospects 2024 provides population estimates and projections for 237 countries or areas; its data portal also provides downloadable datasets and an API. See https://population.un.org/wpp and https://www.un.org/development/desa/pd/content/World-Population-Prospects-2024. Do not treat the current generated scores as official statistics.
+
+
+## Adult career and Hunter progression (2026-10-27)
+
+The life simulator now uses the character's school-access score, education progression, opportunity score, family resources, health and preparation history as gameplay modifiers for adult path choices. University acceptance is probabilistic; vocational training can lead to a full-time job; initial job pools and income vary by educational background and opportunity. Hunter readiness also considers education, opportunity, health and preparation, while keeping awakening and rank fictional game mechanics.
+
+These coefficients are game-balance heuristics, not empirically calibrated forecasts of an individual's real-world outcomes. For future data-backed tuning, UNESCO UIS provides comparable country-level indicators on education access, participation, completion, technical/vocational training and tertiary enrolment: https://data.unesco.org/explore/dataset/uis001/table?flg=en-us . The World Bank education portal also lists enrolment, completion and learning indicators: https://datatopics.worldbank.org/education/ . Country averages should be used as broad context, never as deterministic predictions about an individual.
