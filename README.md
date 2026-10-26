@@ -4,10 +4,10 @@ A mobile-first browser life simulator set in the modern real world, with an orig
 
 ## Current playable prototype
 - Start a new life in a randomly drawn country from a clearly labelled starter dataset.
-- Follow a character year by year from birth through childhood, education, work, relationships, old age and the end of life.
-- Pause/resume, advance one year, and run at 1×, 2×, 4× or 8× speed.
+- Follow a character day by day from birth through childhood, education, work, relationships, old age and the end of life (prototype calendar: 30 days/month, 12 months/year).
+- Pause/resume, advance one day, and run at 1×, 2×, 4× or 8× speed.
 - Make choices at life milestones and during random events; enable Auto mode to resolve choices automatically.
-- Rare fictional Hunter awakening, registration, rank E, and Gate missions layered over ordinary modern life.
+- Rare fictional Hunter awakening, registration, Gate encounters, turn-based combat, leveling, EXP and basic loot layered over ordinary modern life. Skills, inventory and Legacy panels are prototype-level.
 - Mobile-first interface with a modern pixel-art city scene, character status, life events, world news and a local save.
 - Save/load through browser localStorage. The unfinished life stays on the current device/browser.
 
