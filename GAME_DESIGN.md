@@ -32,6 +32,7 @@ Every imported dataset should include source URL, indicator name, reference year
 - Gate missions take multiple simulated days and preserve enemy HP/progress; calculate combat before applying rewards, injuries and mission outcomes.
 - Non-awakened paths: education, skilled trades, service, research, entrepreneurship, public service and family life.
 - A rare awakening is not an automatic success; equipment, training, decisions, resources, and risk matter.
+- Awakened characters periodically choose between applying their power to work/study, training for Hunter EXP, or resting and investing in family/wellbeing. Power effects can benefit civilian careers and daily routines, not only Gate combat.
 
 ## Interface and pacing
 
