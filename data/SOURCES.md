@@ -19,3 +19,11 @@ Country life expectancy, income/GDP and schooling fields are broad rounded conte
 3. Import sex-specific life tables and use age/sex/country-specific mortality probabilities if modelling death by life table.
 4. Import indicator-specific source years and clearly label missing values or regional estimates.
 5. Keep Hunter awakening, Gates, monsters, guilds, rank promotion and mission outcomes labelled as fictional game systems. Never present them as real-world statistics.
+
+
+## Current birth-generation implementation (2026-10-27)
+
+- The birth flow now samples family-income tier and sibling count using a lightweight country-development proxy derived from the existing starter GDP-per-capita values in `world-life.js`.
+- This is a gameplay heuristic, **not** a measured country-specific household-income or fertility distribution. The GDP values and country weights are approximate starter values and must not be described as official current statistics.
+- World Bank Indicators API documentation: https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api . The API offers indicators that can support a later data-import step; country-specific birth weights require an appropriate births/population dataset and reference year.
+- Next data upgrade: import versioned UN World Population Prospects births by country/area and year; then use births as country-selection weights. Import fertility indicators only as a clearly labelled proxy for sibling counts, not as a direct household-size measure.
