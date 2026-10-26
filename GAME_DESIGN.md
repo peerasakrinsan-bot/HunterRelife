@@ -32,7 +32,8 @@ Every imported dataset should include source URL, indicator name, reference year
 - Gate missions take multiple simulated days and preserve enemy HP/progress; calculate combat before applying rewards, injuries and mission outcomes.
 - Non-awakened paths: education, skilled trades, service, research, entrepreneurship, public service and family life.
 - A rare awakening is not an automatic success; equipment, training, decisions, resources, and risk matter.
-- Awakened characters periodically choose between applying their power to work/study, training for Hunter EXP, or resting and investing in family/wellbeing. Power effects can benefit civilian careers and daily routines, not only Gate combat.
+- Awakened characters periodically choose between applying their power to work/study, training for Hunter EXP, or resting and investing in family/wellbeing. Power use consumes energy; energy recovers slowly over days and faster when resting. Power effects can benefit civilian careers and daily routines, not only Gate combat.
+- Power-based specialist careers can unlock through successful use of an awakened ability in adult life. Examples include recovery specialist, energy technician, rapid-response specialist, and shadow operations assistant. These are optional alternate-reality careers; they do not force the player to become a Hunter.
 
 ## Interface and pacing
 
