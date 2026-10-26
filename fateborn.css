@@ -272,3 +272,35 @@ body{background:radial-gradient(ellipse at 12% 0%,#20304b 0,transparent 35%),rad
 @media(max-width:700px){.item-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-panel{padding:9px}.game-nav{grid-template-columns:repeat(6,minmax(0,1fr))}.game-nav button span{font-size:16px}.game-nav button{font-size:7px}}
 
 .save-status{display:block;text-align:right;font-size:8px;letter-spacing:1px;color:#82d7b2;padding:3px 8px;opacity:.9}
+
+/* Main menu — original mobile-first life-sim landing screen */
+:root{--menu-pink:#f05b91;--menu-teal:#00c9b7;--menu-ink:#0b1114;--menu-card:#111c20}
+body{background:#0b1012;color:#e8eeee}
+.earth-app .topbar{padding:13px 2px 9px}
+.earth-app .logo{border-color:#f05b91;color:#f05b91;background:#17181e;border-radius:50%}
+.earth-app .logo span{color:#00c9b7}
+.earth-app .brand small{color:#899a9a}
+.main-menu{display:block;position:relative;overflow:hidden;margin:0 -11px;padding:0 14px 18px;background:#0b1113;border:0;border-radius:0;min-height:calc(100svh - 110px)}
+.menu-version{position:relative;z-index:2;color:#00c9b7;font:10px/1.65 ui-monospace,monospace;letter-spacing:.25px;padding:8px 0 0}
+.menu-version span{color:#8c9b9b}
+.menu-world-art{height:160px;position:relative;overflow:hidden;margin:0 -14px -2px;background:radial-gradient(ellipse at 52% 50%,#183b3b 0,transparent 55%),linear-gradient(180deg,#0b1113,#0b1113)}
+.world-glow{position:absolute;width:260px;height:110px;left:50%;top:22px;transform:translateX(-50%);background:radial-gradient(ellipse,#f05b9138 0,transparent 68%);filter:blur(8px)}
+.world-map-dots{position:absolute;inset:0;background-image:radial-gradient(circle,#f05b91 0 3px,transparent 3.8px),radial-gradient(circle,#00c9b7 0 2px,transparent 3px);background-size:21px 19px,31px 27px;background-position:0 0,9px 8px;opacity:.75;mask-image:radial-gradient(ellipse 49% 66% at 50% 54%,#000 18%,transparent 76%);-webkit-mask-image:radial-gradient(ellipse 49% 66% at 50% 54%,#000 18%,transparent 76%)}
+.world-orbit{position:absolute;border:1px solid #f05b9140;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-18deg)}
+.orbit-one{width:290px;height:78px}.orbit-two{width:210px;height:115px;transform:translate(-50%,-50%) rotate(28deg);border-color:#00c9b735}
+.map-pin{position:absolute;color:#f05b91;text-shadow:0 0 12px #f05b91;font-size:19px}.pin-a{left:24%;top:31%}.pin-b{left:67%;top:47%;color:#00c9b7;text-shadow:0 0 12px #00c9b7}.pin-c{left:48%;top:17%;font-size:12px}
+.menu-title{position:relative;margin-top:-3px}
+.menu-title>p:first-child{font-size:11px;color:#00c9b7;letter-spacing:.5px;margin:0 0 8px}
+.menu-title h1{font-size:clamp(37px,12vw,58px);line-height:.92;letter-spacing:-1.7px;margin:0;font-weight:950;color:#f2f0ec}
+.menu-title h1 span{color:var(--menu-pink)}
+.menu-lead{font-size:21px;line-height:1.5;font-weight:750;margin:18px 0 8px}
+.menu-copy{font-size:13px;line-height:1.9;color:#aebcbd;margin:0}
+.menu-pill-row{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+.menu-pill-row span{border:1px solid #263638;border-radius:99px;background:#111b1e;color:#c6d2d2;font-size:10px;padding:7px 9px}
+.menu-preview{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.menu-preview>div{display:flex;flex-direction:column;gap:5px;border:1px solid #263638;background:#101a1d;border-radius:8px;padding:12px 11px;min-width:0}
+.menu-preview small{font-size:10px;color:#819392}.menu-preview strong{font-size:15px;color:#e9eeee}.menu-preview span{font-size:10px;color:#a2b0b0}
+.menu-start{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;border-radius:8px;background:var(--menu-pink);color:#171016;padding:15px 17px;font-weight:900;font-size:16px;box-shadow:0 7px 25px #f05b9122}
+.menu-start b{font-size:11px;background:#251820;color:#ffb1ce;border-radius:5px;padding:7px 9px}
+.menu-footnote{font-size:9px;line-height:1.6;color:#718383;text-align:center;margin:12px 5px 0}
+@media(min-width:600px){.main-menu{max-width:560px;margin:0 auto;padding:0 22px 24px;border:1px solid #1f3033;border-radius:12px;min-height:0}.menu-world-art{margin-left:-22px;margin-right:-22px;height:190px}.menu-copy{max-width:470px}.menu-title h1{font-size:58px}}
