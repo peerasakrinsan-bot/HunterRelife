@@ -424,3 +424,9 @@ body{background:#0b1012;color:#e8eeee}
 /* Location-aware scene context badges */
 .village-hud{flex-wrap:wrap}
 .village-hud span:nth-child(2){max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.location-history-panel{margin:10px 0}
+.location-history-list{display:grid;gap:6px;margin:8px 0}
+.location-history-item{display:grid;gap:2px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#0d1522}
+.location-history-item b{font-size:11px;color:var(--text)}
+.location-history-item small{font-size:10px;color:var(--muted)}
