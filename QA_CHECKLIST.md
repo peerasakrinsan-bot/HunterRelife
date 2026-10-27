@@ -88,3 +88,27 @@ Static checks are not end-to-end browser tests. The calendar is simplified (30-d
 - [ ] Verify actual Vercel deployment and the live build.
 
 Static checks are not browser tests. The popup lifecycle is implemented, but the end-to-end acceptance criteria remain unverified until exercised in a browser.
+
+
+## Hunter system incremental integration — 2026-10
+
+### Existing-system audit
+- `world-life.js` is the authoritative life simulation, clock, character state, save/load, age progression, decision handling, awakening roll, rank roll, Hunter powers, inventory, economy, Gate combat, and death/Legacy flow.
+- `g.awakened`, `g.rank`, `g.hunterClass`, `g.hunterPower`, `g.skills`, `g.inventory`, `g.money`, `g.health`, `g.energy`, `g.guild`, and `g.combat` are existing authoritative fields and remain in use.
+- `tick()` is the single simulation loop; `start()/stop()` control its timer. `eventDecision()/queueDecision()/pauseForDecision()/finishDecision()` are the existing decision lifecycle. `life-ui.js`, `village-scene.js`, and `character-sprites.js` remain in place.
+- Existing Gate combat was a single persistent combat encounter rather than a staged mission lifecycle; it is now recorded as a mission in the career ledger, without replacing combat.
+
+### Implemented
+- [x] Added bounded `hunterCareer` history ledger for awakening, registration, rank history, training, guild, missions, achievements, reputation, and retirement metadata.
+- [x] Legacy-save migration infers registration only for existing awakened characters already assigned to the existing Hunter Association.
+- [x] Split the age-triggered power check from official registration: the check can fail; successful awakening grants existing power/class/skill and records an event, then queues a separate registration decision.
+- [x] Gate launch requires awakening, registration, a living character, and non-retired status.
+- [x] Gate missions record an ID, stage, enemy, rank, start/resolution dates and outcome; retreat records a non-reward outcome; success marks rewards applied and updates reputation once.
+- [x] Added an age-60 retirement decision with active-service/retirement state persisted in the same save.
+- [x] Hunter status UI indicates registration, current mission, and retirement without adding a duplicate tab.
+- [x] Static JavaScript parse passed after the change.
+
+### Still unverified / not implemented in this incremental pass
+- [ ] Browser and Android end-to-end checks; Vercel deployment status.
+- [ ] Multi-stage travel/preparation/return missions, party composition, NPC Hunter careers, configurable rank evaluation/promotion rules, injury recovery timers, equipment repair/consumable costs, guild switching/suspension, and full retirement re-entry.
+- [ ] Verify pause-until-choice stops all synchronous work in the current tick at the exact moment a decision is generated. Timer stopping alone does not interrupt JavaScript already executing inside `tick()`.
