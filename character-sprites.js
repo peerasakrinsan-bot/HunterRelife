@@ -6,7 +6,7 @@
 (()=>{'use strict';
 const VERSION='1.0.0',CELL={width:24,height:32,pivot:{x:12,y:31},scale:2};
 const STAGES=[
-{id:'newborn',min:0,max:1,scale:0.58,posture:'crawl'},
+{id:'newborn',min:0,max:0,scale:0.58,posture:'crawl'},
 {id:'toddler',min:1,max:3,scale:0.68,posture:'wobble'},
 {id:'early_childhood',min:4,max:6,scale:0.76,posture:'child'},
 {id:'childhood',min:7,max:12,scale:0.84,posture:'child'},
