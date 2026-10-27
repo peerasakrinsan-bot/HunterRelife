@@ -72,3 +72,19 @@ Static checks are not end-to-end browser tests. The calendar is simplified (30-d
 - A scenario passes only after observed in a real browser; static checks do not count as end-to-end pass.
 - No real browser automation, Android gameplay run, or Vercel deployment check has been performed in this pass.
 - The prototype calendar intentionally uses 30-day months; use a controlled test save/debug harness to test rare awakening and death efficiently rather than waiting for random events.
+
+
+## Mandatory decision modal lifecycle — 2026-10
+- [x] Central pause controller captures the previous pause state and stops the simulation timer.
+- [x] Mandatory age-guidance and event decisions open a centered modal; backdrop taps and Escape do not dismiss it.
+- [x] Decision choices are touch-friendly and the background is blocked by a fixed overlay.
+- [x] Pending decisions and queued decisions are normalized and stored in the local save.
+- [x] Multiple decisions are queued and displayed one at a time.
+- [x] Resolving a choice records the selected choice and before/after state in life history, then restores the prior pause state.
+- [x] Birthday tick exits immediately when a mandatory choice is generated.
+- [x] Static JavaScript parse check passed using the current `world-life.js` source.
+- [ ] Browser end-to-end: verify age 0 modal, background frozen, invalid/double submissions, queue order, and reload with pending decision.
+- [ ] Android Chrome: verify modal fit, scrolling, touch targets, and keyboard/back-button behavior.
+- [ ] Verify actual Vercel deployment and the live build.
+
+Static checks are not browser tests. The popup lifecycle is implemented, but the end-to-end acceptance criteria remain unverified until exercised in a browser.
