@@ -374,3 +374,26 @@ body{background:#0b1012;color:#e8eeee}
   .feed-entry p{font-size:8px}
   .scene-bottom span{font-size:6.5px}
 }
+
+
+/* Fix: keep the life-scene illustration visible and high-contrast on phones */
+#game>.scene{display:block!important;visibility:visible!important;opacity:1!important}
+.earth-art{display:block!important;position:relative!important;min-height:220px;background-color:#8bb5c7;overflow:hidden;isolation:isolate}
+.earth-art .sun{z-index:1;display:block;opacity:1}
+.earth-art .scene-backdrop{z-index:1;display:block;opacity:1}
+.earth-art .skyline{z-index:2;display:block}
+.earth-art .street{z-index:3;display:block}
+.earth-art .scene-props{z-index:4;display:block}
+.earth-art .pixel-person{display:block!important;visibility:visible!important;opacity:1!important;z-index:8!important;left:50%;bottom:38px;width:30px;height:56px;transform:translateX(-50%);filter:drop-shadow(2px 2px 0 #111827) drop-shadow(0 0 3px #fff8)}
+.earth-art .person-head{display:block;width:15px;height:14px;left:8px;top:0;background:#e6b18a;box-shadow:0 -4px #3b3334}
+.earth-art .person-body{display:block;width:24px;height:23px;left:3px;top:14px;background:#f0c56b;border:2px solid #26374a}
+.earth-art .person-legs{display:block;top:36px;left:7px;width:6px;height:19px;background:#172b49;box-shadow:10px 0 #172b49}
+.earth-art .scene-caption{z-index:10}
+.earth-art .scene-bubble{z-index:11}
+.earth-art .scene-weather{z-index:5}
+.scene-home .scene-backdrop{background:linear-gradient(90deg,transparent 0 9%,#8b674c 9% 27%,#684a3b 27% 29%,transparent 29% 100%);clip-path:polygon(0 40%,30% 40%,30% 100%,0 100%);opacity:.9}
+.scene-school .scene-backdrop{inset:28% 16% 23%;background:repeating-linear-gradient(90deg,#cbd9d4 0 38px,#7193a0 38px 43px);border:5px solid #f0f1dc;box-shadow:0 0 0 4px #536e78,0 5px 12px #172b4933}
+.scene-school .skyline{opacity:.25;filter:none}
+.scene-park .scene-backdrop{opacity:1}
+@media(max-width:700px){.earth-art{height:clamp(220px,32vh,270px)!important;min-height:220px}.earth-art .pixel-person{bottom:35px;transform:translateX(-50%)}}
+@media(max-width:380px){.earth-art{height:220px!important;min-height:220px}}
