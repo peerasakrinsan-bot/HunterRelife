@@ -323,3 +323,54 @@ body{background:#0b1012;color:#e8eeee}
 @media(min-width:600px){.birth-screen{padding-top:38px}.birth-card-body{padding:30px}.birth-actions{max-width:640px;margin:0 auto}}
 
 .origin-context{margin:10px 0 0;padding:10px 12px;border:1px solid #263638;border-radius:6px;background:#10191c;color:#9fb4b2;font-size:11px;line-height:1.8}
+
+
+/* Mobile-first gameplay: show the life scene and daily log immediately */
+@media(max-width:700px){
+  #game{display:flex;flex-direction:column;gap:0;align-items:stretch}
+  #game>.hero-hud{order:0;width:100%;margin-bottom:5px}
+  #game>.scene{order:1;width:100%;margin-bottom:6px}
+  #game>.events-panel{order:2;width:100%;margin-bottom:7px}
+  #game>.critical-card{order:3;width:100%}
+  #game>.worldbar{order:4;width:100%;margin-top:2px}
+  #game>.sim-controls{order:5;width:100%}
+  #game>.profile-strip{order:6;width:100%}
+  #game>.life-system{order:7;width:100%}
+  #game>.combat-panel{order:8;width:100%}
+  #game>.ending{order:9;width:100%}
+  #game>.detail-panel{order:10;width:100%}
+  #game>.game-nav{order:11;width:100%}
+  #game>.source-note{order:12;width:100%}
+  .earth-art{height:clamp(190px,27vh,235px)}
+  .scene{padding:6px}
+  .scene-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:8px;padding:4px 5px}
+  .scene-top #country{max-width:52%;text-align:right;overflow-wrap:anywhere}
+  .scene-caption{left:7px;right:7px;bottom:7px;padding:5px 7px}
+  .scene-caption b{font-size:10px}
+  .scene-caption small{font-size:8px}
+  .scene-bubble{font-size:8px;padding:3px 5px;max-width:42%;white-space:normal}
+  .scene-bottom{display:flex;justify-content:space-between;gap:4px;padding:5px 2px 1px}
+  .scene-bottom span{font-size:7px;white-space:nowrap}
+  .events-panel{padding:8px}
+  .events-panel .section-heading h2{font-size:14px}
+  .events-panel .eyebrow{font-size:8px}
+  .events-panel .tab-switch{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+  .feed{max-height:300px;overflow-y:auto;overscroll-behavior:contain}
+  .feed-entry{grid-template-columns:48px minmax(0,1fr);column-gap:6px;padding:7px 4px}
+  .feed-entry time{font-size:7px}
+  .feed-entry strong{font-size:10px;line-height:1.35}
+  .feed-entry p{font-size:9px;line-height:1.45;margin-top:3px}
+  #game>.worldbar{margin-bottom:5px}
+  #game>.sim-controls{margin-bottom:6px;padding:7px}
+  .control-top{margin-bottom:5px}
+  .speed-row{gap:4px}
+  .run-btn,.speed,.step-btn{min-height:32px}
+}
+@media(max-width:380px){
+  .earth-art{height:190px}
+  .scene-top{font-size:7px}
+  .scene-top #country{max-width:48%}
+  .feed-entry{grid-template-columns:43px minmax(0,1fr)}
+  .feed-entry p{font-size:8px}
+  .scene-bottom span{font-size:6.5px}
+}
