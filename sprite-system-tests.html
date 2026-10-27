@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Character Sprite MVP Tests</title>
+<style>body{font:16px system-ui;background:#101722;color:#eef;padding:20px}canvas{image-rendering:pixelated;background:#b8b8b8;border:1px solid #778}li.pass{color:#9fe6b1}li.fail{color:#ff9b9b}</style>
+<h1>Character Sprite MVP · Acceptance Smoke Tests</h1><p>These checks validate the procedural registry only. They do not verify the complete gameplay UI or deploy.</p><canvas id="preview" width="360" height="180"></canvas><ol id="results"></ol>
+<script src="character-sprites.js"></script><script>
+(()=>{const out=document.getElementById('results'),ctx=document.getElementById('preview').getContext('2d');let n=0;function test(name,fn){const li=document.createElement('li');try{const result=fn();if(result===false)throw Error('assertion failed');li.className='pass';li.textContent='PASS — '+name}catch(e){li.className='fail';li.textContent='FAIL — '+name+': '+e.message}out.appendChild(li);n++}
+const S=window.RebornSprites;
+test('registry loads with stable master cell',()=>S&&S.cell.width===24&&S.cell.height===32);
+test('all nine life stages resolve correctly',()=>['newborn','toddler','early_childhood','childhood','adolescent','young_adult','adult','mature_adult','elderly'].every((id,i)=>S.stageFor([0,2,5,9,15,22,32,50,70][i]).id===id));
+test('same identity produces repeatable appearance',()=>JSON.stringify(S.resolve({age:30,identity:{id:'test-1'}}).identity)===JSON.stringify(S.resolve({age:30,identity:{id:'test-1'}}).identity));
+test('newborn is age-appropriate and cannot equip adult weapon',()=>{const a=S.resolve({age:0,job:'Hunter',weapon:'sword'});return a.stage==='newborn'&&a.outfit==='baby'&&a.weapon===null});
+test('child hunter job is safely downgraded to school clothes',()=>S.resolve({age:10,job:'Hunter',weapon:'sword'}).outfit==='school');
+test('adult hunter outfit selects hunter gear',()=>S.resolve({age:30,job:'Hunter',weapon:'sword'}).outfit==='hunter');
+test('elderly appearance uses elder stage',()=>S.resolve({age:70}).stage==='elderly');
+test('left/right facing and animation state are accepted',()=>S.resolve({age:25,facing:'left',action:'walk'}).facing==='left');
+test('canvas draw produces a sprite without throwing',()=>{S.draw(ctx,80,140,{age:0,identity:{id:'test-baby'},action:'crawl'});S.draw(ctx,150,140,{age:30,identity:{id:'test-hunter'},job:'Hunter',weapon:'sword',action:'attack'});S.draw(ctx,220,140,{age:70,identity:{id:'test-elder'},action:'walk'});return true});
+test('cache API is available and clearable',()=>{S.getCached('test',()=>({ok:true}));const ok=S.cache.has('test');S.clearCache();return ok&&!S.cache.has('test')});
+document.title+=' — '+[...out.children].filter(x=>x.className==='pass').length+'/'+n+' passed';
+})();
+</script></html>
