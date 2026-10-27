@@ -80,3 +80,19 @@ This is an original hybrid concept, not an exact copy. A credible real-world sim
 - Event history is chronological and category-filterable; consequential events must mutate simulation state, record outcomes, and pause for a decision only when player input is required.
 - The fictional Hunter/Gate awakening, guild, skills, ranks, combat, and legacy systems remain part of the same life simulation.
 - Avoid loading two competing navigation redesign scripts at once; `life-ui.js` is the active shell.
+
+
+## Hunter-system audit and incremental implementation — 2026-10
+
+### Dependency map
+- `world-life.js`: authoritative state `g`; `tick()` and `start()/stop()` simulation clock; `newLife()/load()/normalizeState()/save()` persistence; `eventDecision()/queueDecision()/pauseForDecision()/finishDecision()` mandatory decision lifecycle; `decide()` outcomes; `rollHunterRank()/rollAwakeningPower()`; `startGate()/combatAction()` combat and rewards; `archiveLife()` and death handling.
+- `index.html`: existing Hunter/combat/skills/inventory/decision UI IDs.
+- `fateborn.css`: existing UI theme and modal styling.
+- `life-ui.js`: existing UI shell/navigation; retained.
+- `village-scene.js`, `character-sprites.js`, `geographic-world.js`: scene, sprite, and geography systems; retained.
+
+### Hunter career state
+Existing character fields remain authoritative for live stats, health, currency, rank, class, powers, skills, inventory, guild, and combat. A bounded `hunterCareer` ledger adds historical records and career-only metadata; it does not duplicate those live stats. Older saves are normalized with defaults.
+
+### Current incremental scope
+Awakening and registration are separate decisions; Gate combat is tracked as a persistent mission record; registration and retirement gate field-mission access; reward resolution has an explicit mission-resolved guard. Browser end-to-end verification remains required.
