@@ -460,3 +460,25 @@ button:focus-visible{outline:2px solid #b8fff3;outline-offset:2px}
 
 /* The legacy anchor menu is replaced by the accessible five-tab bar. */
 .game-nav{display:none!important}.activity-summary h2,.mini-timeline h2{font-size:15px}.activity-summary p{margin:5px 0;font-size:13px}.activity-summary .muted{font-size:11px}.mini-timeline-items{display:grid;gap:6px}.mini-event{position:relative;padding:8px 9px 8px 25px;border:1px solid #293b50;border-radius:8px;background:#101a29;font-size:11px;line-height:1.45;color:#dce6f5}.mini-event:before{content:'•';position:absolute;left:10px;color:var(--cyan);font-size:18px;top:4px}.mini-timeline .text-btn{font-size:11px;color:var(--cyan);background:transparent;border:0;padding:6px}
+
+/* Mobile-first autonomous life UI */
+.life-ui-shell{display:none}
+body:has(#game:not([hidden])) .life-ui-shell{display:block}
+body:has(#game:not([hidden])) #game{display:contents}
+.life-topbar{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 2px 8px}
+.life-portrait{width:46px;height:46px;border:1px solid #52728b;border-radius:10px;background:linear-gradient(145deg,#243c54,#101a2a);display:grid;place-items:center;font-size:27px;image-rendering:pixelated}
+.life-identity{display:grid;min-width:0;gap:2px}.life-identity strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.life-identity span,.life-identity small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.life-vitals{display:grid;gap:5px;font-size:11px;text-align:right}.life-vitals span:first-child{color:#ff9caa}.life-vitals span:last-child{color:var(--gold)}
+.life-clock{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:7px;padding:7px;margin:0 0 10px;border:1px solid #34485f;border-radius:10px;background:#0c1522f5;backdrop-filter:blur(12px);font-size:11px}
+.life-clock-actions{display:flex;gap:5px}.life-clock button{min-width:40px;min-height:36px;border:1px solid #3a5066;border-radius:7px;background:#172638;color:#eef4ff;font-weight:800}.life-clock button#lifePause{min-width:66px;background:#16433f;color:#a6f4e5}.life-clock .life-speed.active{background:#264b54;border-color:var(--cyan);color:var(--cyan)}
+.life-view{display:none}.life-view.active{display:block}.life-view .scene{margin-bottom:9px}.life-view .earth-art,.life-view .pixel-scene{min-height:240px}.life-view .events-panel{margin-top:9px}.life-activity-card{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px;margin-bottom:9px}.life-activity-card>div{display:grid;gap:3px;min-width:0}.life-activity-card strong{font-size:14px}.life-activity-card small{color:var(--muted);font-size:11px}.activity-dot{color:var(--green);font-size:16px;animation:lifePulse 1.8s infinite}
+.life-bottom-nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:min(100%,900px);padding:6px 8px calc(7px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;border:1px solid #304158;border-bottom:0;border-radius:14px 14px 0 0;background:#0b1320f5;backdrop-filter:blur(14px)}
+.life-bottom-nav button{display:grid;justify-items:center;align-content:center;gap:2px;min-height:52px;border:1px solid transparent;border-radius:9px;background:transparent;color:#a8b6c9;font-size:11px;font-weight:700}.life-bottom-nav button span{font-size:19px;line-height:1.2}.life-bottom-nav button.active{background:#153e47;border-color:#3bbfca;color:#a9fff2;box-shadow:inset 0 -2px #54dbe2}
+.life-view .panel{scroll-margin-top:62px}.life-view .section-heading h2{font-size:16px}.life-view .feed{font-size:12px}.life-view .muted{font-size:12px;line-height:1.5}
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.more-grid button{min-height:48px;border:1px solid #344a62;border-radius:9px;background:#172638;color:var(--text);padding:10px;font-weight:700}
+.life-view .critical-choices button{min-height:46px}.life-view button{touch-action:manipulation}
+body:has(#game:not([hidden])) .topbar,body:has(#game:not([hidden])) footer,body:has(#game:not([hidden])) .source-note{display:none}
+body:has(#game:not([hidden])) .app{padding:0 10px calc(84px + env(safe-area-inset-bottom))}
+@keyframes lifePulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media(min-width:650px){.life-topbar{grid-template-columns:54px minmax(0,1fr) auto}.life-portrait{width:52px;height:52px}.life-view .earth-art,.life-view .pixel-scene{min-height:330px}.life-clock{position:relative}.life-bottom-nav{border-radius:14px 14px 0 0}}
+@media(max-width:360px){.life-clock{align-items:flex-start;flex-direction:column}.life-clock-actions{width:100%}.life-clock-actions button{flex:1}.life-identity strong{font-size:13px}.life-bottom-nav button{font-size:10px}}
