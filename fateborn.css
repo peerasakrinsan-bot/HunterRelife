@@ -528,3 +528,26 @@ body{background:radial-gradient(ellipse at 50% 0%,#1b3028 0%,var(--bg) 58%);colo
 .feed-entry.importance-important{border-left:3px solid #d7ad52;padding-left:12px}
 button:focus-visible{outline:2px solid #79d8bb;outline-offset:2px}
 @media(min-width:700px){.life-view-host{padding:16px 20px 100px}.life-bottom-nav{max-width:760px;left:50%;transform:translateX(-50%);width:100%;border-radius:14px 14px 0 0}}
+
+
+/* PHASE 5 — atmospheric scene variants and mobile-first decision panel */
+.earth-art:not(.village-scene){transition:filter .35s ease,background-color .35s ease}
+.earth-art.weather-rain:not(.village-scene){filter:saturate(.78) brightness(.84)}
+.earth-art.weather-rain:not(.village-scene)::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(108deg,transparent 0 17px,#d5e8f022 18px 19px,transparent 20px 31px),linear-gradient(#4b668a22,#172b4c35)}
+.earth-art.weather-snow:not(.village-scene){filter:saturate(.62) brightness(1.05)}
+.earth-art.weather-snow:not(.village-scene)::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(circle at 15% 25%,#fff9 0 1px,transparent 2px),radial-gradient(circle at 72% 18%,#fff9 0 1px,transparent 2px),radial-gradient(circle at 48% 58%,#fff8 0 1px,transparent 2px),linear-gradient(#d8e8f01a,#e4f2f02c)}
+.earth-art.weather-fog:not(.village-scene){filter:saturate(.7) brightness(1.03)}
+.earth-art.weather-fog:not(.village-scene)::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,#c9d5d655,#d4dedb88 70%,#c4d0cb33)}
+.earth-art.weather-hot:not(.village-scene){filter:saturate(1.12) sepia(.12) brightness(1.04)}
+.earth-art.weather-cold:not(.village-scene){filter:saturate(.72) hue-rotate(7deg) brightness(.92)}
+.critical-card{position:relative;overflow:hidden;padding:15px;background:radial-gradient(ellipse at 100% 0%,#76602b33,transparent 55%),linear-gradient(145deg,#30291f,#171c25 78%);border:1px solid #b9924e;box-shadow:inset 0 1px #f6d28a22,0 10px 26px #0003}
+.critical-label{display:inline-flex;align-items:center;gap:6px;padding:4px 7px;border:1px solid #9c7a42;border-radius:4px;background:#4a3924;color:#ffe0a0;font-size:8px;letter-spacing:1.1px}
+.critical-card h2{margin:10px 0 6px;font-size:17px;line-height:1.35;color:#fff0ca}
+.critical-card #decisionText{margin:0;color:#d2d0c7;font-size:12px;line-height:1.75}
+.critical-choices{display:grid;grid-template-columns:1fr;gap:8px;margin-top:14px}
+.critical-choices button{position:relative;min-height:43px;padding:11px 12px;border:1px solid #5b5547;border-radius:8px;background:linear-gradient(110deg,#253044,#1b2431);color:#f3f0e7;text-align:left;font-size:12px;line-height:1.5;transition:border-color .15s,background .15s,transform .15s}
+.critical-choices button:before{content:"›";display:inline-block;margin-right:8px;color:var(--gold);font-weight:900}
+.critical-choices button:hover,.critical-choices button:focus-visible{outline:none;border-color:#e2bd72;background:linear-gradient(110deg,#3b3529,#202b3a)}
+.critical-choices button:active{transform:translateY(1px)}
+@media(min-width:560px){.critical-choices{grid-template-columns:1fr 1fr}.critical-card h2{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.earth-art:not(.village-scene),.critical-choices button{transition:none}}
