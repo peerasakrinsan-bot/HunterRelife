@@ -420,3 +420,7 @@ body{background:#0b1012;color:#e8eeee}
 .village-action-label{position:absolute;z-index:5;bottom:8px;left:8px;right:8px;text-align:center;background:#263b32e8;border:1px solid #b7d59b;border-radius:4px;padding:6px;color:#fff2ce;font:700 11px monospace;pointer-events:none}
 .village-controls,.village-interact{display:none!important}
 @media(max-width:520px){.earth-art.village-scene{height:300px!important;min-height:300px!important}.village-hud span{font-size:9px;padding:4px 5px}.village-action-label{font-size:10px}}
+
+/* Location-aware scene context badges */
+.village-hud{flex-wrap:wrap}
+.village-hud span:nth-child(2){max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
