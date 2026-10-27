@@ -71,3 +71,12 @@ This is an original hybrid concept, not an exact copy. A credible real-world sim
 - The former generic 'Other countries (sampled)' option is replaced by named countries with their own city lists.
 - Country and city names are real-world references. Gates, monsters, awakening, Hunter ranks, and specialist powers remain fictional elements layered onto that setting.
 - City lists are curated starter samples, not a complete gazetteer; they are not intended to represent all cities in each country.
+
+
+## UI and gameplay direction — Way of Xian reference
+- Mobile-first, dark jade/forest panels with warm gold time controls and a persistent five-tab navigation.
+- Life tab prioritizes the living scene, current activity, and a short recent-event timeline.
+- Character, World, Events, and More retain their own information hierarchy; the existing game state and IDs remain the source of truth.
+- Event history is chronological and category-filterable; consequential events must mutate simulation state, record outcomes, and pause for a decision only when player input is required.
+- The fictional Hunter/Gate awakening, guild, skills, ranks, combat, and legacy systems remain part of the same life simulation.
+- Avoid loading two competing navigation redesign scripts at once; `life-ui.js` is the active shell.
