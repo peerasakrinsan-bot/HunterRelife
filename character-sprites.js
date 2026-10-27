@@ -7,8 +7,9 @@
 const VERSION='1.0.0',CELL={width:24,height:32,pivot:{x:12,y:31},scale:2};
 const STAGES=[
 {id:'newborn',min:0,max:0,scale:0.58,posture:'crawl'},
-{id:'toddler',min:1,max:3,scale:0.68,posture:'wobble'},
-{id:'early_childhood',min:4,max:6,scale:0.76,posture:'child'},
+{id:'toddler',min:1,max:2,scale:0.66,posture:'wobble'},
+{id:'preschool',min:3,max:5,scale:0.74,posture:'child'},
+{id:'early_childhood',min:6,max:6,scale:0.78,posture:'child'},
 {id:'childhood',min:7,max:12,scale:0.84,posture:'child'},
 {id:'adolescent',min:13,max:17,scale:0.94,posture:'teen'},
 {id:'young_adult',min:18,max:25,scale:1,posture:'adult'},
