@@ -128,3 +128,22 @@ Static checks are not browser tests. The popup lifecycle is implemented, but the
 - [ ] Verify Vercel deployment and live gameplay.
 
 Static checks are not runtime tests. The full career progression remains an incremental roadmap; multi-day missions, qualification-based rank promotions, complete injury recovery, and persistent NPC guild simulation are not yet complete.
+
+
+### Hunter integration static preflight — 2026-10-27
+- [x] `world-life.js` parses with `new Function(source)` after Hunter integration edits.
+- [x] Existing `tick()/start()/stop()` remains the single simulation clock.
+- [x] Awakening test and official registration are separate decision paths.
+- [x] Gate launch checks awakened, registered, not retired, and no active mission.
+- [x] Gate mission records start, stage, resolution, outcome, and a one-time reward guard.
+- [x] Career ledger and older-save defaults are normalized through the existing save model.
+- [x] Hunter training consumes energy and uses bounded proficiency with diminishing EXP gain.
+- [x] Retirement choice updates persistent career state.
+- [x] Static DOM-ID references in `world-life.js` resolve against `index.html`.
+- [ ] Browser test failed awakening and ordinary-life continuation.
+- [ ] Browser test successful awakening → registration → Gate mission → retreat/success → reload.
+- [ ] Verify reward idempotence under repeated clicks and reload.
+- [ ] Verify age-60 retirement and post-retirement Gate blocking.
+- [ ] Injury/recovery, rank promotion, guild changes, and NPC Hunter simulation remain incomplete.
+
+Static checks do not prove runtime behavior. No browser automation, Android run, or live Vercel deployment check was executed in this pass.
