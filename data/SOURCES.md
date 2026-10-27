@@ -43,3 +43,12 @@ For future data-backed versions, use official country datasets and retain the so
 The life simulator now uses the character's school-access score, education progression, opportunity score, family resources, health and preparation history as gameplay modifiers for adult path choices. University acceptance is probabilistic; vocational training can lead to a full-time job; initial job pools and income vary by educational background and opportunity. Hunter readiness also considers education, opportunity, health and preparation, while keeping awakening and rank fictional game mechanics.
 
 These coefficients are game-balance heuristics, not empirically calibrated forecasts of an individual's real-world outcomes. For future data-backed tuning, UNESCO UIS provides comparable country-level indicators on education access, participation, completion, technical/vocational training and tertiary enrolment: https://data.unesco.org/explore/dataset/uis001/table?flg=en-us . The World Bank education portal also lists enrolment, completion and learning indicators: https://datatopics.worldbank.org/education/ . Country averages should be used as broad context, never as deterministic predictions about an individual.
+
+
+## Geographic environment system (bundled prototype)
+
+- `geographic-world.js` contains hand-authored scene profiles keyed by country and selected city-name patterns. These profiles are for consistent pixel-art scene composition only; they are **not verified geospatial, elevation, climate-normal, boundary, or time-zone data**.
+- Coordinates and elevation are left null rather than fabricated. The app does not query OpenStreetMap or live weather services.
+- Country-level climate and vegetation classes are broad illustrative tags. Local terrain selection is a procedural scene hint and may be incomplete for real cities.
+- Birthplace and location history are persisted in the character save. Activity transitions currently cover local home, play, training, work, and park destinations; inter-city travel routes, travel costs, official map tiles, and verified administrative regions remain future work.
+- When adding verified geographic data, record dataset version, license, attribution, field provenance, and fallback rules here before presenting its values as factual.
