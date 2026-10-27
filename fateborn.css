@@ -490,3 +490,41 @@ body:has(#game:not([hidden])) .app{padding:0 10px calc(84px + env(safe-area-inse
 
 /* Unified life-event timeline and category filters */
 .event-filter-row{display:flex;gap:6px;overflow-x:auto;padding:7px 0 10px;scrollbar-width:thin}.event-filter-row button{flex:0 0 auto;min-height:36px;padding:7px 10px;border:1px solid #34475d;border-radius:8px;background:#121e2d;color:#c1cede;font-size:11px}.event-filter-row button.active{background:#21434b;border-color:#66d9d5;color:#b6fff4}.feed-entry{border-left:3px solid #586d82;padding:9px 10px;margin:7px 0;background:#111d2b;border-radius:0 8px 8px 0}.feed-entry.importance-important{border-left-color:#f1c875}.feed-entry.importance-critical{border-left-color:#ff7187}.feed-entry time{display:block;color:#92a4b9;font-size:10px;margin-bottom:3px}.feed-entry strong{display:block;font-size:13px}.feed-entry p{font-size:12px;line-height:1.45;margin:4px 0 0;color:#c4cede}.life-recent-list{display:grid;gap:7px}.recent-event{display:grid;gap:3px;padding:8px 10px;background:#111d2b;border-radius:8px;border-left:2px solid #5abcb7}.recent-event small{font-size:10px;color:#93a6bb}.recent-event strong{font-size:12px}.recent-event p{font-size:11px;line-height:1.4;color:#c4cede;margin:0}.recent-life-events .section-heading button{border:1px solid #34485f;background:#16273a;color:var(--cyan);border-radius:7px;padding:7px 10px;font-size:11px}
+
+
+/* Way-of-Xian-inspired life-simulation presentation: immersive scene, jade panels, gold time controls. */
+:root{--bg:#0b1512;--panel:#14231e;--panel-2:#20342d;--line:#425d51;--text:#e6eee8;--muted:#9cafaa;--cyan:#67cbb0;--gold:#e7bd55;--red:#e9786e}
+body{background:radial-gradient(ellipse at 50% 0%,#1b3028 0%,var(--bg) 58%);color:var(--text)}
+.life-ui-shell{max-width:760px;margin:0 auto;background:rgba(9,20,16,.96);border-color:#344c41}
+.life-topbar,.life-clock{background:#0f1b16;border-color:#334b40}
+.life-portrait{border-color:#537568;background:#20352c}
+.life-view-host{padding:10px 12px 88px;min-height:48vh}
+.life-view{display:none;gap:12px}
+.life-view.active{display:flex;flex-direction:column}
+.life-activity-card,.recent-life-events,.detail-panel,.events-panel,.critical-card{background:linear-gradient(145deg,#182a23,#112019);border:1px solid #3d594c;border-radius:15px;box-shadow:0 8px 22px #0002}
+.life-activity-card{display:flex;align-items:center;justify-content:space-between;padding:12px 15px}
+.life-activity-card .activity-dot{color:#67cbb0;text-shadow:0 0 12px #67cbb066}
+.life-clock-actions button,.life-speed{border-radius:10px}
+.life-clock-actions .life-speed{background:#253a30;border:1px solid #5a7467;color:#dfe9e2}
+.life-clock-actions .life-speed.active{background:#d8ad35;color:#182019;border-color:#f0cf67;font-weight:800}
+.life-bottom-nav{background:#0c1713;border-top:1px solid #344c41;box-shadow:0 -8px 25px #0003}
+.life-bottom-nav button{color:#92a59d}
+.life-bottom-nav button.active{color:#e6eee8;background:#1a342a;border-top:3px solid #62c9ad}
+.life-bottom-nav button span{font-size:1.2rem}
+.event-filter-row{display:flex;gap:7px;overflow-x:auto;padding:7px 0 11px;scrollbar-width:thin}
+.event-filter-row button{white-space:nowrap;flex:0 0 auto;border:1px solid #486356;background:#1c3028;color:#cbd9d1;border-radius:999px;padding:8px 12px;font-size:.82rem}
+.event-filter-row button.active{background:#d9eee4;color:#14231d;border-color:#d9eee4;font-weight:800}
+.recent-life-events{padding:14px}
+.life-recent-list{display:grid;gap:8px}
+.recent-event{padding:10px 12px;border-left:3px solid #67cbb0;background:#1b3027;border-radius:0 9px 9px 0}
+.recent-event small,.recent-event p{color:#a9bcb2}
+.recent-event strong{display:block;margin:3px 0;color:#e8f0ea}
+.life-view .panel{border-radius:14px}
+#decision{background:#172820;border:1px solid #557666;border-radius:16px;padding:16px;box-shadow:0 12px 35px #0005}
+#decision button{width:100%;text-align:left;padding:13px 15px;margin:5px 0;border-radius:10px;background:#22382f;border:1px solid #688476;color:#edf5ef}
+#decision button:active{border-color:#67cbb0;background:#2a493c}
+.feed-entry{background:#13231c;border-bottom-color:#344b40;padding:12px 10px}
+.feed-entry time{color:#8eaaa0}
+.feed-entry.importance-important{border-left:3px solid #d7ad52;padding-left:12px}
+button:focus-visible{outline:2px solid #79d8bb;outline-offset:2px}
+@media(min-width:700px){.life-view-host{padding:16px 20px 100px}.life-bottom-nav{max-width:760px;left:50%;transform:translateX(-50%);width:100%;border-radius:14px 14px 0 0}}
