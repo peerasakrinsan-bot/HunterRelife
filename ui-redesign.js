@@ -26,5 +26,14 @@ const skillPanel=get('skillsPanel');if(skillPanel){const h=skillPanel.querySelec
 const lifeHeading=views.life.querySelector('.scene-caption b');if(lifeHeading)lifeHeading.setAttribute('aria-live','polite');
 const hud=get('hudRank');if(hud)hud.title='สถานะพลังและอาชีพจะเปลี่ยนตามข้อมูลจำลอง';
 const originalRender=window.render; // the main game renderer owns simulation state and is not replaced.
+const activityCard=document.createElement('section');activityCard.className='panel activity-summary';activityCard.innerHTML='<div class="section-heading"><div><p class="eyebrow">CURRENT ACTIVITY</p><h2>กิจวัตรปัจจุบัน</h2></div><span class="rank">AUTO</span></div><p id="activitySummaryText">ตัวละครดำเนินชีวิตตามสถานะจำลอง</p><small id="activitySummaryPlace" class="muted">สถานที่และกิจกรรมอัปเดตตามโลกจำลอง</small>';
+const lifeView=views.life;const scene=lifeView.querySelector('.earth-scene');if(scene)scene.after(activityCard);
+const mini=document.createElement('section');mini.className='panel mini-timeline';mini.innerHTML='<div class="section-heading"><div><p class="eyebrow">RECENT MOMENTS</p><h2>เหตุการณ์ล่าสุด</h2></div><button type="button" class="text-btn" id="openEventsTab">ดูทั้งหมด</button></div><div id="miniTimelineItems" class="mini-timeline-items"><p class="muted">เหตุการณ์จะปรากฏเมื่อชีวิตเริ่มดำเนินไป</p></div>';
+activityCard.after(mini);get('openEventsTab').addEventListener('click',()=>show('events'));
+function updateMiniTimeline(){const source=get('feed'),dest=get('miniTimelineItems');if(!source||!dest)return;const children=[...source.children].filter(n=>n.textContent.trim()).slice(0,4);if(!children.length)return;dest.replaceChildren(...children.map(node=>{const item=document.createElement('div');item.className='mini-event';item.textContent=node.textContent.trim().replace(/\\s+/g,' ').slice(0,180);return item}))}
+function updateActivity(){const a=get('activitySummaryText'),p=get('activitySummaryPlace'),act=get('activity'),sub=get('sceneSubcaption'),loc=get('currentLocationSummary');if(a&&act&&act.textContent.trim())a.textContent=act.textContent.trim();if(p){const where=loc&&loc.textContent.trim()&&!loc.textContent.includes('รอสร้าง')?loc.textContent.trim():sub&&sub.textContent.trim();if(where)p.textContent=where}}
+const feed=get('feed');if(feed&&window.MutationObserver)new MutationObserver(updateMiniTimeline).observe(feed,{childList:true,subtree:true,characterData:true});
+window.addEventListener('life-sim-update',updateActivity);window.addEventListener('village-life-event',()=>{updateActivity();updateMiniTimeline()});setInterval(()=>{updateActivity();updateMiniTimeline()},1800);
+
 show('life');
 })();
