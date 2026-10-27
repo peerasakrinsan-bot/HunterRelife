@@ -6,11 +6,11 @@ const views={life:document.createElement('section'),character:document.createEle
 Object.entries(views).forEach(([id,node])=>{node.className='ui-view'+(id==='life'?' active':'');node.id='view-'+id;node.dataset.view=id;game.insertBefore(node,get('saveStatus'))});
 const move=(selector,view)=>{const nodes=game.querySelectorAll(selector);nodes.forEach(n=>views[view].appendChild(n))};
 // Keep original DOM IDs intact so the simulation's render/save code continues to update the same nodes.
-move('.hero-hud, .worldbar, .sim-controls, .earth-scene, .critical-card, #ending','.life');
-move('.profile-strip, .life-system, #skillsPanel','#character');
-move('.location-history-panel','#world');
-move('.events-panel, #combatPanel','#events');
-move('#inventoryPanel, #legacyPanel, .source-note','#more');
+move('.hero-hud, .worldbar, .sim-controls, .earth-scene, .critical-card, #ending','life');
+move('.profile-strip, .life-system, #skillsPanel','character');
+move('.location-history-panel','world');
+move('.events-panel, #combatPanel','events');
+move('#inventoryPanel, #legacyPanel, .source-note','more');
 // Use clear tab headings and a five-item navigation bar.
 const nav=document.createElement('nav');nav.className='mobile-tabbar';nav.setAttribute('aria-label','หน้าหลัก');
 const items=[['life','⌂','ชีวิต'],['character','♙','ตัวละคร'],['world','◎','โลก'],['events','▤','เหตุการณ์'],['more','☷','เพิ่มเติม']];
