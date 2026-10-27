@@ -112,3 +112,19 @@ Static checks are not browser tests. The popup lifecycle is implemented, but the
 - [ ] Browser and Android end-to-end checks; Vercel deployment status.
 - [ ] Multi-stage travel/preparation/return missions, party composition, NPC Hunter careers, configurable rank evaluation/promotion rules, injury recovery timers, equipment repair/consumable costs, guild switching/suspension, and full retirement re-entry.
 - [ ] Verify pause-until-choice stops all synchronous work in the current tick at the exact moment a decision is generated. Timer stopping alone does not interrupt JavaScript already executing inside `tick()`.
+
+
+## Hunter safe integration audit — 2026-10-27
+- [x] Inspected existing awakening, registration, rank history, skills, combat, active mission, retirement, save/load, time controller, and UI modules before extending systems.
+- [x] Documented dependency map and known limitations in HUNTER_SYSTEM_AUDIT.md.
+- [x] Fixed nested mandatory-decision cleanup so a newly generated registration decision is not cleared with the previous choice.
+- [x] Added an immediate tick exit when an event creates a pending mandatory decision.
+- [x] Prevented Auto toggle from submitting a pending mandatory decision automatically.
+- [x] Current world-life.js passes static JavaScript parse check.
+- [ ] Browser test awakening → registration → rank evaluation with the modal remaining open at each step.
+- [ ] Browser test pending decision while Auto is toggled; verify simulation remains paused.
+- [ ] Test Gate victory, retreat, death, and reload to confirm mission rewards apply once.
+- [ ] Test older save migration and retirement restrictions in Android Chrome.
+- [ ] Verify Vercel deployment and live gameplay.
+
+Static checks are not runtime tests. The full career progression remains an incremental roadmap; multi-day missions, qualification-based rank promotions, complete injury recovery, and persistent NPC guild simulation are not yet complete.
