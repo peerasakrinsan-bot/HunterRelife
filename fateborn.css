@@ -397,3 +397,17 @@ body{background:#0b1012;color:#e8eeee}
 .scene-park .scene-backdrop{opacity:1}
 @media(max-width:700px){.earth-art{height:clamp(220px,32vh,270px)!important;min-height:220px}.earth-art .pixel-person{bottom:35px;transform:translateX(-50%)}}
 @media(max-width:380px){.earth-art{height:220px!important;min-height:220px}}
+
+
+/* SCENE 01 — Childhood Village canvas layer stack */
+.earth-art.village-scene{position:relative!important;display:block!important;overflow:hidden!important;height:clamp(270px,62vw,360px)!important;min-height:270px!important;border:2px solid #344b3b;background:#8ac7e5!important;image-rendering:pixelated;isolation:isolate}
+#villageCanvas{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated;touch-action:pan-y}
+.village-hud{position:absolute;z-index:5;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;gap:5px;pointer-events:none}
+.village-hud span{font:700 10px/1.2 monospace;color:#fff5d6;background:#263b32e8;border:1px solid #b7d59b;border-radius:4px;padding:5px 7px;text-shadow:1px 1px #24352b}
+.village-interact{position:absolute;z-index:6;left:50%;bottom:55px;transform:translateX(-50%);max-width:92%;padding:6px 9px;border:1px solid #f3d59a;border-radius:4px;background:#273d31ed;color:#fff2ce;font:700 11px monospace;text-align:center;white-space:normal}
+.village-interact[hidden]{display:none}
+.village-controls{position:absolute;z-index:7;left:9px;right:9px;bottom:8px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.village-controls button{pointer-events:auto;min-width:48px;min-height:40px;border:2px solid #e6c78c;border-radius:5px;background:#2d4938ed;color:#fff1c9;font:700 15px monospace;box-shadow:0 3px #182b22;touch-action:none}
+.village-controls #villageAction{min-width:100px;font-size:12px;background:#82553a}
+.village-controls button:active{transform:translateY(2px);box-shadow:0 1px #182b22}
+@media(max-width:520px){.earth-art.village-scene{height:300px!important;min-height:300px!important}.village-hud span{font-size:9px;padding:4px 5px}.village-controls button{min-width:45px;min-height:42px}.village-interact{bottom:58px}}
